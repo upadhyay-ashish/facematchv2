@@ -7,7 +7,7 @@
 Incorrect
 </p>
 <p class="correct">The Correct answer is <%= @pic_user.name %></p><br/><br/>
-<%= image_tag("#{@pic_user.avatar_file_name}",:width=>350,:height=>350) %><br/><br/><br/><br/>
+<%= image_tag("#{@pic_user.avatar.url}",:width=>350,:height=>350) %><br/><br/><br/><br/>
 <% end %>
 <%= image_submit_tag("play_again.jpg", :align => "center", :id => "Play_Again") %>
 <%= link_to "Exit",users_path %>

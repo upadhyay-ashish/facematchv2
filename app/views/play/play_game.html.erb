@@ -1,7 +1,7 @@
 <% form_tag 'answer' do -%>
 <div style="margin-left: 600px">
 <%#= link_to(image_tag("#{@pik_user[0].avatar_file_name}",:width=>350,:height=>350),@pik_user[0].avatar_file_name,:class=>("top_up")) %>
-<%= image_tag("#{@pic_user.avatar_file_name}",:width=>350,:height=>350) %>
+<%= image_tag("#{@pic_user.avatar.url}",:width=>350,:height=>350) %>
 <%= hidden_field_tag "pic_user_id", "#{@pic_user.id}" %>
 <br></br>
 
