@@ -59,13 +59,3 @@ div.field, div.actions {
   font-size: 12px;
   list-style: square;
 }
-
-.incorrect {
-   color: red
-}
-
-.correct {
-   font-weight: bold;
-   font-style: italic;
-   color: green
-}
