@@ -1,16 +1,21 @@
-<% form_tag 'play_game' do -%>
-<div style="margin-left: 600px">
-<% if @selected_user.id == @pic_user.id %>
-<p class="correct">Correct</p><br/>
-<% else %>
-<p class="incorrect">
-Incorrect
-</p>
-<p class="correct">The Correct answer is <%= @pic_user.name %></p><br/><br/>
-<%= image_tag("#{@pic_user.avatar.url}",:width=>350,:height=>350) %><br/><br/><br/><br/>
-<% end %>
-<%= image_submit_tag("play_again.jpg", :align => "center", :id => "Play_Again") %>
-<%= link_to "Exit",users_path %>
 
+<% form_tag 'play_game' do -%>
+<% if @selected_user.id == @pic_user.id %>
+<div style="margin-left: 200px;"
+<p><%= image_tag('correct.png') %> </p>
+</div>
+<%= image_tag("#{@pic_user.avatar.url}",:width=>300,:height=>250,:class => "image1") %>s
+<% else %>
+<div style="margin-left: 160px;"
+<p><%= image_tag('incorrect.png') %> </p>
+<p>The Correct answer is  <%= @pic_user.name.capitalize %></p>
+</div>
+<%= image_tag("#{@pic_user.avatar.url}",:width=>300,:height=>250,:class => "image1") %>
+<% end %>
+<div style="margin-left: 220px">
+  <p><%= image_submit_tag("play_again.png",:id => "Play_Again") %></p>
+  </div>
+<div style="margin-left: 225px">
+  <p><%= link_to image_tag('back.png'),users_path %></p>
 </div>
 <% end -%>
